@@ -25,7 +25,7 @@ except:
 SkinList = ['MANO', 'BRAZO','PIERNA', 'ENCIA', 'LENGUA', 'CABEZA']
 BList = ['PANTALON','SACO', 'CEJAS', 'CABELLO']
 WList = ['FALDA', 'BLUSA','CORBATA', 'CAMISA', 'PLAYERA', 'CHAMARRA', 'CHALECO', 'VESTIDO', 'DIENTE']
-eyesList = ['OJO']
+eyesList = ['OJO', 'RETINA']
 matList = []
 
 for mat in range(0, 4):
@@ -75,7 +75,6 @@ for geo in cmds.ls(et='mesh'):
 				try:
 					cmds.select(cl=True)
 					cmds.select(geo)
-					print geo
 					cmds.hyperShade(assign=eyesMat)
 				except:
 					pass
