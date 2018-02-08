@@ -1,6 +1,6 @@
 #arturoalcibia@hotmail.com
 import maya.cmds as cmds
-import Utils.findEnv as findEnv
+import Utils.os_Find_Env.findEnv_app as findEnv
 '''
 Skin = (1, 0.8, 0.8) - (1, 0.55, 0.55)
 B = (0, 0, 0)
@@ -41,7 +41,7 @@ for mat in range(0, 4):
 		WMat = shader
 		cmds.setAttr(shader + ".color", 1, 1, 1, type="double3")
 	else:
-		path = findEnv.findEnv_('MAYA_SCRIPT_PATH', 'Scripts', 'MKF', 'RND')
+		path = findEnv.findEnvVar_('MAYA_SCRIPT_PATH', 'Scripts', 'MKF', 'RND')
 		
 		eyesMat = shader
 		cmds.setAttr(shader + ".color", 0, 0, 1, type="double3")
